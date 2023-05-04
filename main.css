@@ -1,0 +1,27 @@
+*{
+    background:#A9A9A9;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    padding: 48px;
+}
+.container h1{
+    text-align: center;
+    padding-bottom: 96px;
+}
+.container h2{ 
+    padding-bottom: 24px;
+}
+.container h3{
+    padding-bottom: 24px;
+}
+a:link {
+    color:#000000;
+    text-decoration:none;
+    }
+a:hover {
+    color:#4F4F4F;
+    text-decoration:underline;
+    }
