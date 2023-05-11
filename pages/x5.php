@@ -98,6 +98,106 @@
 
     <div class="container-block">
         <h3>Instanciação, construct e exemplos.</h3>
+        <p>Construtores são métodos especiais de uma classe que são automaticamente chamados quando um objeto da classe é criado. Eles permitem a inicialização e configuração inicial do objeto.</p>
+
+        <?php 
+            class SalaDeAula{
+                private $aluno;
+                private $turma;
+
+                function __construct($n, $m)
+                {
+                    $this->aluno = $n;
+                    $this->turma = $m;
+                }
+
+                public function fichaDoAluno(){
+                    return "O Aluno " . $this->aluno . " é da turma " . $this->turma;
+                }
+            }
+
+            $lider = new SalaDeAula("Hiago", "A");
+
+            echo $lider->fichaDoAluno();
+            echo"</br>";
+        ?>
+
     </div>
+    <div class="container-block">
+        <h3>Property promotion.</h3>
+        <p>Property promotion é uma característica introduzida no PHP 8.0 que simplifica a definição e inicialização de propriedades em classes. Anteriormente, era necessário definir explicitamente as propriedades em uma classe e, em seguida, criar um construtor para atribuir valores a essas propriedades. Com o property promotion, é possível definir e inicializar as propriedades diretamente na declaração da classe, sem a necessidade de um construtor separado.</p>
+
+        <?php 
+            class Pessoa {
+                public function __construct(
+                    private string $nome,
+                    private int $idade,
+                    private string $profissao
+                ){}
+
+                public function getNome(): string{
+                    return $this->nome;
+                }
+
+                public function getIdade(): int{
+                    return $this->idade;
+                }
+
+                public function getProfissao(): string{
+                    return $this->profissao;
+                }
+            }
+
+            $pessoa = new Pessoa('Hiago', 24,'Desenvolvedor');
+            echo $pessoa->getNome();
+            echo"</br>";
+            echo $pessoa->getIdade();
+            echo"</br>";
+            echo $pessoa->getProfissao();
+        ?>
+    </div>
+    <div class="container-block">
+        <h3>Classes anônimas.</h3>
+        <p>As classes anônimas no PHP são classes que não possuem um nome explicitamente definido. Elas são úteis quando você precisa criar uma classe temporária ou uma classe simples sem a necessidade de nomeá-la.</p>
+
+        <?php 
+            $classeAnonima = new class {
+                public function saudacao() {
+                   return "Olá, mundo!";
+                }
+             };
+             
+             echo $classeAnonima->saudacao();
+        ?>
+    </div>
+    <div class="container-block">
+        <h3>Herança em classes.</h3>
+        <p>A herança em classes é um conceito fundamental da programação orientada a objetos que permite criar novas classes (chamadas de classes base ) com base em classes existentes. A herança permite que as subclasses herdem os atributos e métodos da classe base, facilitando a reutilização de código e a organização hierárquica das classes.</p>
+
+        <?php 
+            class Animal {
+                public function __construct(public $nomeAnimal)
+                {
+                    $this->nomeAnimal = $nomeAnimal;
+                }
+
+                public function emitirSom(){
+                    echo "O animal emite um som.";
+                }
+            }
+
+            class Cachorro extends Animal {
+                public function latir(){
+                    echo "O animal está latindo.";
+                }
+            }
+
+            $cachorro = new Cachorro("Rex");
+            echo $cachorro->emitirSom();
+            echo "</br>";
+            echo $cachorro->latir();
+        ?>
+    </div>
+
 </body>
 </html>
