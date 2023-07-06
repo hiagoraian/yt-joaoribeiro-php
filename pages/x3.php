@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Instruções e ciclos. </h2>
+        <h2>Instruções e ciclos.</h2>
         <a href="../index.html">Voltar para a página incial</a>
     </div>
     <div class="container-block">

@@ -173,7 +173,7 @@
         <p>Elas permitem criar funções de forma mais concisa e fácil de ler, principalmente quando se trata de funções simples.</p>
 
         <?php 
-            function dobrar($num) {
+            function dobrar($num){
                 return $num *2;
             };
 

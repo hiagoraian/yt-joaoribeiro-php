@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Apresentação, variáveis, tipos de dados, operadores. </h2>
+        <h2>Apresentação, variáveis, tipos de dados, operadores.</h2>
         <a href="../index.html">Voltar para a página incial</a>
     </div>
     <div class="container-block">
@@ -60,7 +60,8 @@
             $a -=10;
             $a *=10;
             $a /=2;
-
+            
+            //Incremento e decremento.
             $a ++;
             $a --;
         ?>
@@ -80,6 +81,8 @@
             #maior ou igual
             $var = ( 10 > 5);
             $var = ( 40 < 20);
+            $var = ( 40 <= 20);
+            $var = ( 40 >= 20);
         ?>
     </div>
     <div class="container-block">

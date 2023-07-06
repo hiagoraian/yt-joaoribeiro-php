@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Strings e arrays </h2>
+        <h2>Strings e arrays</h2>
         <a href="../index.html">Voltar para a página incial</a>
     </div>
     <div class="container-block">
@@ -97,7 +97,6 @@
                 'MG' => ['Cristalia', 'Grão Mogol', 'Montes Claros'],
                 'SP' => ['Bauro', 'São Paulo', 'Santo Andre']
             ];
-
 
             echo $dados['nome'];echo"</br>";
             echo $cidades['MG'][1];echo"</br>";echo"</br>";

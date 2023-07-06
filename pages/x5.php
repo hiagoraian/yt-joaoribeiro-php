@@ -186,16 +186,16 @@
                 }
             }
 
-            class Cachorro extends Animal {
-                public function latir(){
-                    echo "O animal está latindo.";
+            class Gato extends Animal{
+                public function mia(){
+                    echo "O gato miou.";
                 }
             }
 
-            $cachorro = new Cachorro("Rex");
-            echo $cachorro->emitirSom();
+            $gato = new Gato("Rex");
+            echo $gato->mia();
             echo "</br>";
-            echo $cachorro->latir();
+            echo $gato->emitirSom();
         ?>
     </div>
 
