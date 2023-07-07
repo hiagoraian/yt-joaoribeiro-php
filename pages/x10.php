@@ -85,7 +85,82 @@
             var_dump($exportTest);
             echo "</br>";
             var_export($exportTest);
+        ?>
+    </div>
+    <div class="container-block">
+        <h3>Manipulação de string.</h3>
+        <?php 
+            #Implode - Juntar elementos de uma matriz em uma string.
+            $implodeTest = ['lastname', 'email', 'phone'];
+            var_dump($implodeTest);
+            echo "</br>";
+            echo implode(",", $implodeTest). "</br>";
+            
+            #Str_split - Converte uma string para um array.
+            $strsplitTest = "Hiago";
+            $arrSplit = str_split($strsplitTest);
+            print_r($arrSplit);
+            echo "</br>";
 
+            #Strtolower - Converte uma string para minúsculas.
+            $strtolowerTest = "Eu sou Hiago Raian";
+            echo strtolower($strtolowerTest) . "</br>";
+
+            #Strtoupper - Converte uma string para maiúsculas.
+            $strtoupperTest = "Eu Sou hiago";
+            echo strtoupper($strtoupperTest) . "</br>";
+
+            #Trim - retira espaço no início e final de uma string.
+            $trimTest = " Hiago ";
+            echo $trimTest . "</br>";
+            echo trim($trimTest) . "</br>";
+
+            #Ucfirst - Converte para maiúscula o primeiro caractere de uma string.
+            $firstTest = "eu passei aqui.";
+            echo ucfirst($firstTest). "</br>";
+
+            #ucwords - Converte para maiúsculas o primeiro caraquetere de cada letra.
+            $wordsTest = "eu passei por aqui.";
+            echo ucwords($wordsTest) . "</br>";
+        ?>  
+    </div>
+    <div class="container-block">
+        <h3>Manipulação de arrays.</h3>
+        <?php 
+            #Array_filter - Filtra elementos de um array utilizando uma função callback.
+
+            function impar($var){
+                return $var & 1;
+            }
+            function par ($var){
+                return !($var & 1);
+            }
+
+            $arrayFilter = [ 1,2,3,4,5,6,7,8,9,10];
+
+            print_r(array_filter($arrayFilter, "impar"));
+            echo "</br>";
+
+            #Array_keys - Retorna as chaves, números e string, do array.
+            $arrayKeysTest = [1,3,4,6,7,8,10,20,21];
+            print_r(array_keys($arrayKeysTest, 7)); 
+
+            #Array_map - Aplica uma função callback em todos os elementos dos arrays
+            function notaPeso($nota){
+                return $nota * 4;
+            }
+
+            $notasTest = [3,9,12,23,44];
+            $resultMapTest = array_map('notaPeso', $notasTest);
+             print_r($resultMapTest);
+             echo "</br>";
+
+             #Array_merge - Combina um ou mais arrays.
+             $arrayMergeTest1 = ['azul',2,4,32];
+             $arrayMergeTest2 = ['branco', 36,11,23];
+
+             $resultMerge = array_merge($arrayMergeTest1, $arrayMergeTest2);
+             print_r($resultMerge);
         ?>
     </div>
 </body>
