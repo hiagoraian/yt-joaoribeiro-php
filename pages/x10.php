@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Atividade sobre variáveis, arrays, string, registros, foreach, operadores ternários e funções. </h2>
+        <h2>Revisão sobre manipulação de variáveis, strings e arrays. </h2>
         <a href="../index.html">Voltar para a página incial</a>
     </div>
     <div class="container-block">
@@ -161,6 +161,76 @@
 
              $resultMerge = array_merge($arrayMergeTest1, $arrayMergeTest2);
              print_r($resultMerge);
+
+             #Array_multisort - Ordena múltiplos arrays ou array multidimensionais.
+             $arrayMultisortTest1 = [2,3,5,7,9,12,14];
+             $arrayMultisortTest2 = [22,33,15,57,69,1222,144];
+             $arrayMultisortTest3 = [20,333,52,67,94,122,145];
+             array_multisort($arrayMultisortTest1, $arrayMultisortTest2, $arrayMultisortTest3);
+
+             var_dump($arrayMultisortTest1);
+
+             #array_pop - Extrai um elemento do final do array. Pega o último elemento.
+             $frutasPopTest = ['melancia', 'mamao', 'morango'];
+
+             $frutasPop = array_pop($frutasPopTest);
+             print_r($frutasPop);
+             echo "</br>";
+
+             #array_product - Retorna o produto com um inteiro ou float dos elementos do array.
+             $arrayProductTest = [1,2,3,4,5];
+             echo array_product($arrayProductTest) . "</br>";
+
+             #array-push - Adiciona um ou mais elementos no final de um array.
+             $pushTest = [1,2,3,4,5,6,7,8];
+             array_push($pushTest, 9,10,11 );
+             print_r($pushTest);
+             echo "</br>";
+
+             #array_rand - Escolhe uma ou mais chaves aleatórias no final de um array.
+             $randTest = [1,2,3,4,5,6,7];
+             echo array_rand($randTest) . "</br>";
+
+             #array_reverse - Retorna um array com os elementos na ordem inversa.
+            $reverseTest = [1,2,3,4,5,6];
+            print_r(array_reverse($reverseTest));
+            echo "</br>";
+
+             #array_search - Procura por um valor em um array e retorna sua chave correspondente.
+             $searchTest = [1,2,3,4,5,6];
+             print_r(array_search(3, $searchTest));
+             echo "</br>";   
+
+             #array_shift - Extrai o primeiro elemento de um array. Pega o primeiro valor.
+            $shiftTest = [2,3,4,5];
+            print_r(array_shift($shiftTest));
+            echo"</br>";
+
+             #array_sum - Calcula a soma dos elementos de um array.
+            $sumTest = [1,2,3,4];
+            print_r(array_sum($sumTest));
+            echo "</br>";
+
+             #array_unique - Remove os valores duplicados de um array.
+            $uniqueTest = [1,1,1,3,4,5,6,7,7,7,8];
+            print_r(array_unique($uniqueTest));
+            echo "</br>";
+
+             #array_unshift - Adiciona um ou mais elementos no inicio de um array.
+            $unshiftTest = [1,2,3,4,5,6];
+            array_unshift($unshiftTest, 0);
+            print_r($unshiftTest);
+            echo "</br>";
+
+             #array_values - Retorna todos os valores de um array.
+            $arrayValuesTest = [ 12,3,7,84,43,23,8];
+            print_r(array_values($arrayValuesTest));
+            echo "</br>";
+
+             #count - Conta o número de elementos de uma variável, ou propriedades de um objeto.
+            $countTest =  [12,1,2,31,124,6,45,37];
+            echo count($countTest) . "</br>";
+
         ?>
     </div>
 </body>
