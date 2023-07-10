@@ -176,6 +176,82 @@
     </div>
     <div class="container-block">
         <h3>Funções</h3>
+        <p>Estrutura básica, parametros de uma função, parametros adicionais, named arguments, return, funções anonimas (clasure), arrow functions.</p>
+        <p>Funções são blocos de códigos nomeados que podem receber argumentos(dados de entrada), realizar um conjunto de instruções e retornar um valor ou executar uma tarefa especifica.</p>
+        <p>Estrutura básica: <strong>function nome(parametros) { instruções...  return resultado }</strong></p>
+
+        <?php 
+            #Criando uma função.
+            function introducao ($nome){
+                echo "Bem vindo, $nome";
+            }
+            introducao('Hiago');
+            echo "</br>";
+
+            #Criando uma função detalhada.
+            function menu ($op){
+                switch($op){
+                    case 1:
+                        echo "Vocês escolheu a 1.";
+                        break;
+                    
+                    case 2:
+                        echo "Você escolheu a 2.";
+                        break;
+                    
+                    case 3:
+                        echo "Você escolheu a 3.";
+                        break;
+
+                    default:
+                        echo "Opção invalida.";
+                }
+            }
+            menu(4);
+            echo "</br>";
+
+            # Parametros adicionais - Quando por padrão é adicionado um valor opcional a um parametro.
+            function saudacoes ($nome, $text = "Olá"){
+                echo "$text, $nome!";
+            }
+            saudacoes("Hiago");
+            echo "</br>";
+            saudacoes("Hiago", "Bem vindo");
+            echo "</br>";
+
+            # Named arguments - É uma funcionalidade que permite que passamos argumentos para uma função utilizando o nome correspondente do parâmetro.
+
+            function areaTriangulo ($base, $altura){
+                return ($base * $altura)/2;
+            }
+
+            echo areaTriangulo(altura:10, base:5) . "</br>";
+
+            # Funções anonimas - São funções que não possuem um nome definido. Elas podem ser atribuidas a variáveis, passadas como argumentos para outra função ou usada como valores de retorno de outras funções.
+
+            $mensagem = function($nome){
+                echo "Olá, $nome!";
+            };
+
+            $mensagem("Hiago");
+            echo "</br>";
+
+            $notas = [6,8,7,9,20,32,52,60,23,80,60,50,80,90,78,75];
+
+            $notasAprovadas = array_filter($notas, function($nota){
+                return $nota >=60;
+            });
+            print_r($notasAprovadas);
+
+            #Arrow Functions - São uma sintaxe simplificada para definir funções anônimas em PHP.
+
+            $mensagemArrow = fn($nome) => "Olá, $nome!";
+            $notasAprovadasArrow = array_filter($notas, fn($nota) => $nota >= 60);
+        ?>
+    </div>
+    <div class="container-block">
+        <h3>Atividade sobre Funções.</h3>
+        <a href="./functions/index.php">Ir para atividade.</a>
     </div>
 </body>
 </html>
