@@ -174,9 +174,11 @@
         <h3>Herança em classes.</h3>
         <p>A herança em classes é um conceito fundamental da programação orientada a objetos que permite criar novas classes (chamadas de classes base ) com base em classes existentes. A herança permite que as subclasses herdem os atributos e métodos da classe base, facilitando a reutilização de código e a organização hierárquica das classes.</p>
 
-        <?php 
-            class Animal {
-                public function __construct(public $nomeAnimal)
+        <?php
+            class Animalpage5 {
+                public $nomeAnimal;
+
+                public function __construct($nomeAnimal)
                 {
                     $this->nomeAnimal = $nomeAnimal;
                 }
@@ -186,7 +188,7 @@
                 }
             }
 
-            class Gato extends Animal{
+            class Gato extends Animalpage5{
                 public function mia(){
                     echo "O gato miou.";
                 }
@@ -197,6 +199,7 @@
             echo "</br>";
             echo $gato->emitirSom();
         ?>
+
     </div>
 
 </body>

@@ -65,6 +65,7 @@
         echo $cat->getName();  // Output: Lucy
         echo $cat->makeSound();  // Output: Meow!
 
+        # Essa classe animal estava dando conflito com a mesma classe animal da página 5.
         ?>
     </div>
     <div class="container-block">

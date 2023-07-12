@@ -47,7 +47,7 @@
     <div class="container-block">
         <h3>Access levels public, protected e private</h3>
         <p>São usadas para definir a visiabilidade de propriedades e métodos de uma classe.</p>
-        <p>Public: Eles podem ser acessados de qualquer lugar, tanto dentro da própria classe quanto a partir de fora da classe. </p>
+        <p>Public: Eles podem ser acessados de qualquer lugar. </p>
 
         <?php 
             class ExemploPublic{
@@ -152,7 +152,7 @@
     </div>
     <div class="container-block">
         <h3>Static</h3>
-        <p>Quando uma propriedade ou método é declarado como estático, ele pertence à classe em si, e não a uma instância especifica da classe. Isso significa que voc~e pode acessar diretamente propriedades estáticos e chamar métodos estáticos sem a necessidade de criar um objeto da classe.</p>
+        <p>Quando uma propriedade ou método é declarado como estático, ele pertence à classe em si, e não a uma instância especifica da classe. Isso significa que você pode acessar diretamente propriedades estáticos e chamar métodos estáticos sem a necessidade de criar um objeto da classe.</p>
         
         <?php 
             class ExemploStatic{
