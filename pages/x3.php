@@ -13,7 +13,7 @@
         <a href="../index.html">Voltar para a página incial</a>
     </div>
     <div class="container-block">
-        <h3>IF, IF ELSE, ELSE</h3>
+        <h3>IF, IF ELSE, ELSE.</h3>
         <p>As instruções são utilizadas para controlar o fluxo da aplicação de acordo com determinadas condições.</p>
         
         <?php 
@@ -32,7 +32,8 @@
             }
 
             echo "</br>";
-            #Alternativa ao IF, utilizada em páginas web.
+
+            # Alternativa ao IF, que pode ser utilizado em páginas web.
             if($var == 5):
                 echo "Igual a 5";
             else:
@@ -50,7 +51,7 @@
 
     </div>
     <div class="container-block">
-        <h3>Switch</h3>
+        <h3>Switch.</h3>
         <p>Uma alternativa ao IF.</p>
 
         <?php 
@@ -102,21 +103,24 @@
             }
         ?>
     </div>
-    <hr><hr>
+   
     <div class="container-block">
-        <h3>While, Do While</h3>
-        <p>While executa loop enquanto a condição for verdadeira, Do While executa loop primeiro, depois verifica a condição. </p>
+        <h3>While, Do While.</h3>
+        <p>While executa loop enquanto a condição for verdadeira, Do While executa o primeiro loop, depois verifica a condição. </p>
 
         <?php 
-            $x = 10;
+            $x = 9;
             while($x <10){
-                echo "X é menor que 10, while";
+                echo "X é menor que 10, while com break, para não ficar com loop contínuo.";
+                break;
             }
 
+            echo "</br>";
+
             do {
-                echo "X é menor que 10, Do While";
+                echo "X é menor que 08, Do While";
             }
-                while($x <10);
+            while($x <8);
 
             echo "</br>";
 
@@ -128,8 +132,8 @@
     </div>
 
     <div class = "container-block">
-        <h3>For</h3>
-        <p>Permite executar um bloco de códigos determinado números de vezes.</p>
+        <h3>For.</h3>
+        <p>Permite executar um bloco de códigos determinado número de vezes.</p>
 
         <?php 
             for ($i = 0; $i <=10; $i++){
@@ -143,8 +147,10 @@
             }
 
             echo "</br>";
+
             $arrayNames = [ 'Hiago', 'Karlla', 'Maria'];
 
+            # Sizeof é muito utilizado para direcionar o "limite" de execução do loop. 
             for ( $i = 0; $i < sizeof($arrayNames); $i++){
                 echo "$arrayNames[$i]. ";
             }
@@ -152,7 +158,7 @@
     </div>
 
     <div class="container-block">
-        <h3>Foreach</h3>
+        <h3>Foreach.</h3>
         <p>É um ciclo especialmente concebido para fazer uma iteração pelos valores de um array.</p>
 
         <?php 
@@ -162,11 +168,11 @@
                 'Brasil' => 'Brasilia',
                 'Espanha' => 'Madrid'
             ];
+            # Nessa opção de array, temos a chave "MG" e o valor é um outro array, a forma mais fácil de exibir esse valor é usando o implode.
             $cidades = [
                 'MG' => ['Cristalia', 'Grão Mogol', 'Montes Claros'],
                 'SP' => ['Bauro', 'São Paulo', 'Santo Andre']
             ];
-
 
             foreach($names as $name){
                 echo "$name. ";
@@ -188,7 +194,7 @@
     </div>
 
     <div class="container-block">
-        <h3>Break, Continue</h3>
+        <h3>Break, Continue.</h3>
         <p>Break: Serve para interromper a execução de um loop.</p>
         <p>Continue: Permite avançar uma volta do ciclo ignorando o código que deveria ser executado.</p>
     </div>

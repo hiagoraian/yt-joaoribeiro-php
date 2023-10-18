@@ -15,9 +15,10 @@
     <div class="container-block">
         <h3>Introdução a funções.</h3>
         <p>Funções são blocos de códigos identificados por um nome e uma assinatura que permitem que o código seja reutilizado e organizado de uma forma mais consistente.</p>
+        <p>Para utilizar essa função, basta colocar o seu nome e passar parametros necessários.</p>
 
         <?php 
-            #Estrutura básica.
+            # Estrutura básica.
             function funcao(){
                 echo "Executando a estrutura básica de funções. </br>";
             }
@@ -42,14 +43,15 @@
             adicao($c, $d);
             echo "</br>";
 
+            # Utilzando uma função em vez de um foreach.
             $names = ['Hiago', 'Karlla', 'Maria'];
 
-            function saudacoes($name){
+            function saudacoesArrays($name){
                 echo "Seja bem vindo(a), $name.";
             }
 
             foreach ($names as $name){
-                saudacoes($name);
+                saudacoesArrays($name);
                 echo "</br>";
             }
         ?>
@@ -80,12 +82,14 @@
             subtracao(b: 5, c: 10, a:20);
         ?>
 
-        <p>Podemos usar um argumento especial designado por variadic parameter.</p>
+        <p>Podemos usar um argumento especial designado por variadic parameter, para utilizar mais de um parametro.</p>
 
         <?php 
             function arrayFunction(...$arguments){
+                $sumArguments = 0;
                 foreach($arguments as $cont){
-                    echo "$cont. ";
+                    $sumArguments += $cont;
+                    echo "$cont. " . " Soma: $sumArguments. " ."</br>";
                 }
             }
 
@@ -104,18 +108,20 @@
                 return $result;
             }
 
-            $resultado = areaTriangulo(10,2);
+            $resultado = areaTriangulo(base: 2, altura: 10);
 
             echo "A área do triângulo é : $resultado.</br>";
 
-            $count = 10;
-
-            if(avaliarNumero($count)){
+            # Verificar número através de uma função.
+            
+            $numChecked = 100;
+            if(avaliarNumero($numChecked)){
                 echo "O numero está correto.</br>";
-            }
+            }else 
+                echo "O numero está errado.</br>";
 
-            function avaliarNumero($x){
-                if ($x == '10')
+            function avaliarNumero($num){
+                if ($num == '10')
                     return true;
                 else
                     return false;
@@ -149,6 +155,7 @@
                 echo "Olá, sou um texto. </br>";
             };
 
+            # Executando as duas funções anônimas.
             $varText();
             echo $varSoma(10,20);
         ?>
@@ -172,16 +179,18 @@
         <h3>Arrow Functions.</h3>
         <p>Elas permitem criar funções de forma mais concisa e fácil de ler, principalmente quando se trata de funções simples.</p>
 
-        <?php 
+        <?php
+            # Modelo normal.
             function dobrar($num){
                 return $num *2;
             };
 
+            # Arrow functions.
             $dobrar = fn($num) => $num *2;
 
-           echo  dobrar(10);
-           echo "</br>";
-           echo $dobrar(10);
+            echo  dobrar(10);
+            echo "</br>";
+            echo $dobrar(10);
         ?>
     </div>
 </body>

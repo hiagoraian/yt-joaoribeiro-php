@@ -58,14 +58,14 @@
         }
 
         $dog = new Dog('Max');
-        echo $dog->getName();  // Output: Max
-        echo $dog->makeSound();  // Output: Woof!
+        echo $dog->getName();  # Output: Max.
+        echo $dog->makeSound();  # Output: Woof!
         echo "</br>";
         $cat = new Cat('Lucy');
-        echo $cat->getName();  // Output: Lucy
-        echo $cat->makeSound();  // Output: Meow!
+        echo $cat->getName();  # Output: Lucy.
+        echo $cat->makeSound();  # Output: Meow!
 
-        # Essa classe animal estava dando conflito com a mesma classe animal da página 5.
+        # Em um projeto, deve está atento com nomes destinado a cada classe, pois é possível ter conflito.
         ?>
     </div>
     <div class="container-block">
@@ -81,7 +81,7 @@
                 }
                 
                 public function ano($ano){
-                echo "Aluuno do ano: $ano"; 
+                echo "Aluno do ano: $ano"; 
                 }
             }
 

@@ -13,7 +13,7 @@
         <a href="../index.html">Voltar para a página incial</a>
     </div>
     <div class="container-block">
-        <h3>Registros</h3>
+        <h3>Registros.</h3>
         <p>O PHP não possui um tipo de dado especifico chamado "registro" no entanto, é possível criar um registro usando arrays associativos ou objetos.</p>
         <?php 
             $pessoa = [
@@ -60,7 +60,7 @@
         ?>
     </div>
     <div class="container-block">
-        <h3>Operador Ternário</h3>
+        <h3>Operador Ternário.</h3>
         <p>É uma forma de expressar uma condição em uma única linha.</p>
         <p>$variavel = (condição) ? valor_se_verdadeiro : valor_se_falso;</p></br>
         <?php 
@@ -74,7 +74,7 @@
         ?>
     </div>
     <div class="container-block">
-        <h3>Foreach</h3>
+        <h3>Foreach.</h3>
         <p>A estrutura de controle foreach em php é usada para percorrer arrays e objetos.</p></br>
 
         <h4>Exemplo 01: Array numérico.</h4>
@@ -143,7 +143,7 @@
         </br>
         </br>
 
-        <h4>Exemplo 05: Manipulando array com índices numéricos e associativos</h4>
+        <h4>Exemplo 05: Manipulando array com índices numéricos e associativos.</h4>
         <p>Como o array tem indices numéricos e associativos, primeiro foi feito uma condição para se caso a indice for um array, realizar outro foreach para ler ou transformar tudo em string, com implode.</p></br>
 
         <?php 
@@ -181,14 +181,14 @@
         <p>Estrutura básica: <strong>function nome(parametros) { instruções...  return resultado }</strong></p>
 
         <?php 
-            #Criando uma função.
+            # Criando uma função.
             function introducao ($nome){
                 echo "Bem vindo, $nome";
             }
             introducao('Hiago');
             echo "</br>";
 
-            #Criando uma função detalhada.
+            # Criando uma função detalhada.
             function menu ($op){
                 switch($op){
                     case 1:
@@ -243,7 +243,7 @@
             });
             print_r($notasAprovadas);
 
-            #Arrow Functions - São uma sintaxe simplificada para definir funções anônimas em PHP.
+            # Arrow Functions - São uma sintaxe simplificada para definir funções anônimas em PHP.
 
             $mensagemArrow = fn($nome) => "Olá, $nome!";
             $notasAprovadasArrow = array_filter($notas, fn($nota) => $nota >= 60);

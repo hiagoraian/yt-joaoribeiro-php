@@ -19,13 +19,12 @@
         
         <?php 
             class Carro {
-                #Propriedades:
+                # Propriedades.
                 public $marca;
                 public $modelo;
                 public $ano;
 
-
-                #Métodos
+                # Métodos.
                 public function acelerar(){
                     echo "O carro está acelerando!";
                 }
@@ -35,16 +34,34 @@
                 }
             }
 
-            #Criando um objeto da classe carro.
+            # Criando um objeto da classe carro.
             $meuCarro = new Carro();
 
-            #Acessando as propriedades
+            # Acessando as propriedades.
             $meuCarro->marca = "Toyota";
             $meuCarro->modelo = "Corolla";
             $meuCarro->ano = 2023;
 
-            #chamando um método
+            # Chamando um método.
             $meuCarro->acelerar();
+            echo "</br>";
+            
+            # Criando vários métodos com um ciclo.
+            $carArray = [];
+            for($i=0; $i <10; $i++){
+                $car[$i] = new Carro();
+                $car[$i]->marca = "Marca $i";
+                $car[$i]->modelo = "Modelo $i";
+                $car[$i]->ano = "Ano $i";
+
+                array_push($carArray, $car[$i]);
+            }
+            # Listando os carros.
+            foreach( $carArray as $car){
+                echo "</br>";
+                echo " Carro:  $car->marca. " . " Modelo: $car->modelo. " . " Ano: $car->ano. ";
+                echo "</br>";
+            }
             echo "</br>";
         ?>
 
@@ -60,19 +77,21 @@
                 }
             }
 
+            # Criando objetos.
             $quadrado = new Trigonometria();
             $triangulo = new Trigonometria();
             
-           $resultTriangulo = $triangulo->triangulo(10,5);
-           $resultQuadrado = $quadrado->quadrado(10);
+            # Passando parâmetros da função.
+            $resultTriangulo = $triangulo->triangulo(10,5);
+            $resultQuadrado = $quadrado->quadrado(10);
 
-           echo "A base do triangulo é: $resultTriangulo. A base do quadrado é $resultQuadrado.";
-           echo "</br>";
+            echo "A base do triangulo é: $resultTriangulo. A base do quadrado é $resultQuadrado." . "</br>";
+
         ?>
     </div>
     <div class="container-block">
         <h3>Criando um objeto.</h3>
-        <p>Para aceder às propriedades de uma classe, dentro dos métodos da classe, é usado a pseudo variável $this seguida do operados sera -></p>
+        <p>Para acessar às propriedades de uma classe, dentro dos métodos da classe, é usado a pseudo variável $this seguida do operados sera -></p>
 
         <?php 
             class NomeCompleto{
@@ -176,30 +195,42 @@
 
         <?php
             class Animalpage5 {
-                public $nomeAnimal;
 
-                public function __construct($nomeAnimal)
-                {
-                    $this->nomeAnimal = $nomeAnimal;
-                }
+                public function __construct(
+                    private string $nomeAnimal5
+                    ){}
 
+                public function getNome(){
+                        return $this->nomeAnimal5;
+                    }
                 public function emitirSom(){
-                    echo "O animal emite um som.";
+                    echo "O animal emite um som. ";
                 }
             }
 
             class Gato extends Animalpage5{
                 public function mia(){
-                    echo "O gato miou.";
+                    echo "O gato miou. ";
+                }
+            }
+            class Cachorro extends Animalpage5{
+                public function latir(){
+                    echo "O cachorro latiu. ";
                 }
             }
 
-            $gato = new Gato("Rex");
-            echo $gato->mia();
-            echo "</br>";
-            echo $gato->emitirSom();
-        ?>
+            $bob = new Cachorro("Bob");
+            $nala = new Gato("Nala");
 
+            $bob->emitirSom();
+            $bob->latir();
+            echo $bob->getNome() . "</br>";
+
+            $nala->emitirSom();
+            $nala->mia();
+            echo $nala->getNome() . "</br>";  
+        ?>
+        <p>O Get pega um atributo da classe e o set modifica um atributo.</p>
     </div>
 </body>
 </html>

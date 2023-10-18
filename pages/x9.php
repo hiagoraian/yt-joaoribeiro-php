@@ -13,40 +13,40 @@
         <a href="../index.html">Voltar para a página incial</a>
     </div>
     <div class="container-block">
-        <h3>Testanto variáveis: Isset, Empty, is null e Unset</h3>
+        <h3>Testanto variáveis: Isset, Empty, is null e Unset.</h3>
         <p>Acontece inúmeras vezes no nosso código a necessidade de verificar ou textar a existência de variáveis ou do seu valor.</p>
 
         <?php 
-            # Isset
+            # Isset.
             # Permite verificar se uma variável está ou não definida.
-            #null é considerado como uma variável inexistente.
+            # Null é considerado como uma variável inexistente.
 
             $exemploIsset = 1;
 
             echo isset($exemploIsset) ? 'Sim.' : 'Não.';
             echo "</br>";
             
-            #Empty
-            #Verifica se a variável tem um valor vazio (null, 0, false, string vazia) e retorna verdadeiro ou falso.
+            # Empty
+            # Verifica se a variável tem um valor vazio (null, 0, false, string vazia) e retorna verdadeiro ou falso.
 
             $exemploEmpty = 'Hiago';
             echo empty($exemploEmpty) ? 'Vazio' : 'Não vazio';
             echo "</br>";
             
-            #Is_null
-            #verifica se a variável é nula.
+            # Is_null.
+            # verifica se a variável é nula.
 
             $exemploNull = null;
             echo is_null($exemploNull) ? 'É nulo' : 'Não é nulo';
             echo "</br>";
 
-            #Unset
-            #Permite destruir uma variável.
+            # Unset.
+            # Permite destruir uma variável.
 
             $exemploUnset = 'Hiago';
             var_dump($exemploUnset);
             unset($exemploUnset);
-            #var_dump($exemploUnset);
+            # var_dump($exemploUnset);
 
         ?>
     </div>
@@ -89,20 +89,20 @@
         <p>var_export() : Exibe ou retorna uma representação em formato válido de uma variável ou estrutura de dados.</p>
 
         <?php 
-            #Var_dump
+            # Var_dump
             $nome = 'Tião';
             $idade = 44;
             var_dump($nome, $idade);
             echo "</br>";
 
-            #Print_r
+            # Print_r
             $arrayDados = [1,2,3];
             print_r($arrayDados);
             echo "</br>";
             var_dump($arrayDados);
             echo "</br>";
 
-            #Var_export
+            # Var_export
             $carro = "Toyota";
             $carArray = ['Cruze', 'Hilux', 'Marea'];
 

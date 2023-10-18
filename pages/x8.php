@@ -21,7 +21,6 @@
             echo "</br>";
             $objFrame = new Config('Laravel');
             echo $objFrame->getFramework();
-
         ?>
     </div>
     <div class="container-block">
@@ -30,7 +29,6 @@
         <p>A função 'require' interrompe a execução do script se ocorrer algum erro ao incluir o arquivo, se o arquivo não for encontrado ou houver algum outro problema durante a inclusão. Já o 'include' isso não acontece.</p>
 
         <?php 
-
            # require './server/config.php';
            echo $objFrame->getFramework();
         ?>
@@ -81,7 +79,7 @@
             $conversaoTexto = intval($texto);
             var_dump($conversaoTexto);
 
-            # COnversão de arrays
+            # Conversão de arrays
 
             $names = ['Hiago', 'karlla','Maria'];
             var_dump($names);
